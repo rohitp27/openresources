@@ -1,5 +1,7 @@
 ## General containers
 
+All containers use the common_network network by default. If it doesn't exist, it is created when running the dockercompose command.
+
 ### Starting the containers
 `docker-compose -f <yml file path. eg ./dbs/mariadb.yml > up -d` 
 
