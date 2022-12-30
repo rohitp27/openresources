@@ -1,4 +1,7 @@
 version: '2'
+networks:
+  common_network:
+    name: common_network
 services:
 
 #Maria DB
@@ -13,8 +16,4 @@ services:
     ports: 
       - '3306:3306'
     networks:
-      - common-net
-
-networks:
-  common-net:
-    driver: bridge
+      - common_network
