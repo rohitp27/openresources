@@ -1,0 +1,14 @@
+version: '2'
+networks:
+  common_network:
+    name: common_network
+services:
+
+#Redis
+  redis:
+    container_name: redis
+    image: redis:6.2.1-alpine3.13
+    ports: 
+      - '6379:6379'
+    networks:
+      - common_network

@@ -1,0 +1,20 @@
+version: '2'
+services:
+
+#Maria DB
+  mariadb:
+    container_name: mariadb
+    image: mariadb:10.5.9
+    environment: 
+      - MYSQL_ROOT_PASSWORD=spark
+      - MYSQL_USER=spark
+      - MYSQL_PASSWORD=spark
+      - MYSQL_DATABASE=sparkde
+    ports: 
+      - '3306:3306'
+    networks:
+      - common-net
+
+networks:
+  common-net:
+    driver: bridge
